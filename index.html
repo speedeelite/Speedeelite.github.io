@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Speede Elite — Electronics & More</title>
+  <style>
+    :root{
+      --primary:#0b6b3a;
+      --muted:#666;
+      --card-bg:#fff;
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(0,0,0,0.08);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body{margin:0;background:#f4f6f8;color:#222}
+    header{background:linear-gradient(90deg,var(--primary),#0a8a5b);color:#fff;padding:18px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700;font-size:20px}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:12px;font-weight:600}
+    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 16px;background:url('https://i.imgur.com/qSq8k7b.jpeg') center/cover no-repeat;height:240px;border-bottom:6px solid rgba(0,0,0,0.04)}
+    .hero h1{color:#fff;margin:0;font-size:28px;text-shadow:0 2px 6px rgba(0,0,0,0.4)}
+    .container{max-width:1100px;margin:18px auto;padding:0 16px}
+    .section-title{font-size:20px;margin:12px 0;font-weight:700}
+    /* products grid */
+    .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+    .card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;padding:10px;text-align:center}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .card h3{margin:8px 0 4px;font-size:16px}
+    .card p{margin:0;color:var(--muted)}
+    .btn{display:inline-block;margin-top:8px;padding:8px 10px;border-radius:8px;text-decoration:none;font-weight:700}
+    .btn-buy{background:var(--primary);color:#fff}
+    .btn-more{background:#eee;color:#333}
+    /* about & contact */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    footer{background:#111;color:#fff;padding:18px;text-align:center;margin-top:22px}
+    /* responsive */
+    @media (max-width:720px){
+      header{flex-direction:column;align-items:flex-start}
+      .two-col{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Speede Elite</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Speede Elite — Quality Electronics at Low Prices</h1>
+    <p style="color:#fff;opacity:0.95;margin-top:8px">Order on WhatsApp — Fast delivery | Best prices</p>
+  </section>
+
+  <main class="container">
+    <div id="products" class="section">
+      <div class="section-title">Best Selling Products</div>
+
+      <div class="products">
+
+        <!-- Product 1 -->
+        <div class="card">
+          <img src="https://i.imgur.com/1ZQZ1Q7.jpeg" alt="Earbuds">
+          <h3>Earbuds</h3>
+          <p>₹699</p>
+          <a class="btn btn-buy" href="https://wa.me/917006734626?text=Hello%20Speede%20Elite%2C%20I%20want%20to%20order%20Earbuds%20(₹699)">Order on WhatsApp</a>
+          <a class="btn btn-more" href="#" onclick="copyText('Earbuds - ₹699')">Copy</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+          <img src="https://i.imgur.com/1WkJvR3.jpeg" alt="Smart Watch">
+          <h3>Smart Watch</h3>
+          <p>₹899</p>
+          <a class="btn btn-buy" href="https://wa.me/917006734626?text=Hello%20Speede%20Elite%2C%20I%20want%20to%20order%20Smart%20Watch%20(₹899)">Order on WhatsApp</a>
+          <a class="btn btn-more" href="#" onclick="copyText('Smart Watch - ₹899')">Copy</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card">
+          <img src="https://i.imgur.com/VOHyhxT.jpeg" alt="Neckband">
+          <h3>Neckband</h3>
+          <p>₹499</p>
+          <a class="btn btn-buy" href="https://wa.me/917006734626?text=Hello%20Speede%20Elite%2C%20I%20want%20to%20order%20Neckband%20(₹499)">Order on WhatsApp</a>
+          <a class="btn btn-more" href="#" onclick="copyText('Neckband - ₹499')">Copy</a>
+        </div>
+
+        <!-- Example placeholder product (edit or duplicate) -->
+        <div class="card">
+          <img src="https://i.imgur.com/4YV3vYf.jpeg" alt="Placeholder">
+          <h3>Mobile Cover</h3>
+          <p>₹150</p>
+          <a class="btn btn-buy" href="https://wa.me/917006734626?text=Hello%20Speede%20Elite%2C%20I%20want%20to%20order%20Mobile%20Cover%20(₹150)">Order on WhatsApp</a>
+          <a class="btn btn-more" href="#" onclick="copyText('Mobile Cover - ₹150')">Copy</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="about" class="section" style="margin-top:18px">
+      <div class="section-title">About Speede Elite</div>
+      <div style="color:var(--muted)">Speede Elite is your neighbourhood electronics shop. We sell affordable earbuds, watches, chargers and more. Order quickly using WhatsApp and we will confirm and deliver.</div>
+    </div>
+
+    <div id="contact" class="section" style="margin-top:18px">
+      <div class="section-title">Contact & Orders</div>
+      <div class="two-col">
+        <div>
+          <strong>WhatsApp Orders</strong>
+          <p style="color:var(--muted)">Click the green button on any product to send an order message directly to WhatsApp.</p>
+          <p><a class="btn btn-buy" href="https://wa.me/917006734626?text=Hello%20Speede%20Elite%2C%20I%20want%20to%20order%20from%20your%20store">Message on WhatsApp</a></p>
+        </div>
+        <div>
+          <strong>Address (example)</strong>
+          <p style="color:var(--muted)">Your shop address here — e.g. Market Road, Magam</p>
+          <strong>Phone:</strong> +91 7006734626
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 Speede Elite — All Rights Reserved
+  </footer>
+
+  <script>
+    function copyText(txt){
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(txt).then(()=>alert('Copied: '+txt));
+      } else {
+        prompt('Copy text:', txt);
+      }
+    }
+  </script>
+
+</body>
+</html>
